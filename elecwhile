@@ -1,0 +1,67 @@
+#include <stdio.h>
+
+int sum = 0;
+
+
+
+int main() {
+	int i;
+	int t = 0;
+	int user;
+	int watts;
+	int sum=0;
+	int hi=1;
+	int low=1e08;
+	
+
+	printf("Enter number of n%d; ",i);
+	scanf("%lf", &user);
+	
+	while(t <= user){
+		printf("Enter number of watts:");
+		scanf("%d",&watts);
+		if(watts <= 100){
+			int charge = watts * .5;
+			charge += 20;
+			if(charge >= 500){
+				charge = charge*1.10;
+				}
+
+			}
+		else if(watts <= 300){
+                        int charge = watts * .75;
+                        charge += 20;
+                        if(charge >= 500){
+                                charge = charge*1.10;
+                                }
+
+                        }
+else{
+                        int charge = watts * 1.2;
+                        charge += 20;
+                        if(charge >= 500){
+                                charge = charge*1.10;
+                                }
+
+                        }
+else if(watts > 600){
+                        int charge = watts * .1.5;
+                        charge += 20;
+                        if(charge >= 500){
+                                charge = charge*1.10;
+                                }
+t=t+1;
+
+                        }
+	printf("Total bill for customer %d is:",user);
+	printf(charge);
+	sum += charge;
+	if(charge > hi); { hi = charge;}
+	if(charge < lo); {lo = charge;}
+ }
+sum =sum/user;    
+printf("\n--- Billing Summary ---\n");
+printf("Average Bill: $%.2f\n", sum / n);
+printf("Highest Bill: $%.2f\n", hi);
+printf("Lowest Bill: $%.2f\n", lo);
+return 0;
